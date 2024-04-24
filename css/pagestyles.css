@@ -33,8 +33,6 @@ header {
 .title-and-list {
 	flex: 1 1 auto; /* grow, shrink, basis */
   /* Sets a max-width where 250px is an arbitrary value you can adjust */
-  max-width: calc(50% - 250px); /* Adjust the 250px to whatever suits your layout */
-  /* Your existing padding, margin, etc. */
 	padding-left: 3vw;
 	flex-direction: column;
 }
