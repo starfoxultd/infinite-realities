@@ -84,8 +84,8 @@ a:hover h1, a:focus h1 {
 
 .header-paragraph {
   align-items: flex-end;
-  width: 50%; /* Or whatever width works with your design */
-  padding: 20px; /* Optional padding for spacing */
+  width: 64%; /* Or whatever width works with your design */
+  padding: 6vw 0 0 0; /* Optional padding for spacing */
 }
 main {
   /*flex-grow: 1;*/
