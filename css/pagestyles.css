@@ -83,9 +83,12 @@ a:hover h1, a:focus h1 {
 }
 
 .header-paragraph {
+  font-family:  "anonymous-pro", monospace;
   align-items: flex-end;
   width: 64%; /* Or whatever width works with your design */
   padding: 6vw 0 0 0; /* Optional padding for spacing */
+  font-size: 1.6vw;
+  text-indent: 2vw
 }
 main {
   /*flex-grow: 1;*/
