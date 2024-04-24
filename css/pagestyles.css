@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, html {
+  height: 100vh; /* Use viewport height to restrict the page height */
+  max-height: 100vh;
+  /*overflow: hidden; /* Prevent scrolling */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  position: relative; /* Contain absolutely positioned children */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden; /* Hide overflow */
+  justify-content: space-between;
+}
+
+header {
+  
+  position: relative; 
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2vw;
+  
+}
+
+.title-and-list {
+	order: 1;
+  display: flex;
+  flex-direction: column;
+	padding-left: 3vw;
+}
+
+
+nav ul {
+  font-family: "ocr-a-std", monospace;
+  font-weight: 100;
+  font-size: 1.3vw;
+  list-style: none;
+  padding: 10;
+  margin: 0;
+  margin-top: 2vw; /* Adjust spacing as needed */
+}
+
+nav ul li {
+  margin-bottom: 1vw;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* Adjust color to match the design */
+  font-weight: bold; /* If you want the links to be bold */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #00ada7; /* Adjust hover color to match the design */
+}
+
+h1 {
+  font-family: "anonymous-pro", monospace;
+  font-weight: 100;
+  font-size: 4.5vw;
+  line-height: 0.8;
+  color: #333;
+}
+a h1 {
+  color: #333; /* Example color, use whatever is defined for your h1 */
+  text-decoration: none; 
+}
+
+a:hover h1, a:focus h1 {
+  color: #00ada7; /* Adjust hover color to match the design */
+  text-decoration: none; /* Optional: underline on hover for emphasis */
+}
+
+.experiment {
+  order: 2;
+  color: rgba(28,23,33,.88);
+  font-family: "anonymous-pro", monospace;
+  position: absolute;
+  top: 6vw; /* Move down from the top of the header */
+  left: 25vw;
+  padding: 0;
+  font-size: 2vw;
+}
+.experiment .highlight {
+  text-decoration: none; /* Remove any default underlining */
+  background-color: rgba(28,23,33,.88); /* Black background */
+  padding: 0 4px; /* Padding on the sides of the text */
+  box-decoration-break: clone; /* Ensures background goes across line breaks if needed */
+}
+
+main {
+  /*flex-grow: 1;*/
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  margin: 0 auto; /* Center the main content */
+  padding: 2vw 0; /* Give some space on the top and bottom */
+}
+
+.title-and-list,
+aside,
+footer {
+  position: relative;
+  z-index: 2; /* Higher than the main content's z-index to ensure visibility */
+}
+
+
+.circle-overlay {
+  position: absolute;
+  bottom: 1vw;
+  transform: translateY(-50%);
+  z-index: -1; /* Behind the content but above the background */
+}
+.big-number {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-weight: 800;
+	position: absolute;
+	bottom: 0vw;
+	transform: translateY(-50%);
+	z-index: -1;
+  font-size: 10vw;
+  color: #00ada7;
+  opacity: 0.7;
+}
+
+.left-number {
+  right: 2vw; 
+  padding-bottom: 15vw
+}
+
+.right-number {
+  align-self: flex-end;
+  color: #f89b9b;
+  padding-left: 20vw;
+  padding-top: 10vw;	
+}
+.orbit-container {
+  position: absolute;
+  
+  display: flex;
+  justify-content: center;
+}
+.circle-overlay {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 5;
+  left: 10;
+  transform: translate(-50%, -50%);
+}
+.first-circle {
+	bottom: 2vw;
+    right: 5vw; /* Adjust according to design needs */
+    background: radial-gradient(circle, rgba(0,173,167,0.5) 0%, rgba(0,173,167,0.5) 50%, rgba(0,0,0,0) 50%);
+}
+
+.second-circle {
+    left: 10vw; 
+	bottom: 10vw;/* Adjust according to design needs */
+    background: radial-gradient(circle, rgba(248,155,155,0.5) 0%, rgba(248,155,155,0.5) 60%, rgba(0,0,0,0) 50%);
+}
+
+/* Styles for the black box */
+.black-box {
+    position: absolute;
+    bottom:25vw; /* Adjust as needed */
+    left: 10vw; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: rgba(28,23,33,.88);
+    color: #14131C;
+    padding: 2vw 6vw;
+    width: auto;
+    height: auto;
+    z-index: 2; /* Ensure it is above other background elements */
+    text-align: center; /* Center the text inside the box */
+}
+
+
+aside {
+  font-family: "anonymous-pro", monospace;
+  display: flex;
+  flex-direction: column; /* Stack the labels and list vertically */
+  padding: 0px;
+  justify-content: center; /* Center the content vertically */
+}
+
+.labels {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.label {
+  position: absolute;
+  font-size: 2vw;
+  color: #777;
+  /* Remove the previous .label styles here */
+}
+
+.material {
+  bottom: 15vh; /* Adjust the value as needed */
+  left: 30vw; /* Adjust the value as needed */
+}
+
+.time {
+  bottom: 30vw; /* Adjust the value as needed */
+  left: 40vw; /* Adjust the value as needed */
+}
+
+.motion {
+  bottom: 17vw; /* Adjust the value as needed */
+  right: 11vw; /* Adjust the value as needed */
+}
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: .5vw;
+  text-align: center;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+  }
+  
+  .big-number, .circle-overlay {
+    
+  }
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  /* Adjust the list of names to have more space between elements */
+	h1{
+		font-size: 7vw;
+	}
+  nav ul {
+		font-size: 2vw;
+	}
+	
+  nav ul li {
+    margin-bottom: 2em; /* Increases space between list items */
+    font-size: 1.2em; /* Optionally increase the font size if needed */
+  }
+
+  
+  .label {
+    font-size: 4vw; /* Larger font size for labels */
+    margin-bottom: 1vw; /* Add space below each label */
+  }
+
+  /* Adjust positioning for labels to add more space */
+  .material, .time, .motion {
+    position: fixed; /* Switch to static positioning */
+    
+	}
+	.time{
+		top: 20vw;
+	}
+	.motion{
+		top: 40vw;
+	}
+	.material{
+		bottom: 20vw;
+	}
+  
+  /* In case you're using flex or grid for .labels, adjust as follows */
+  .labels {
+    display: flex;
+    flex-direction: column;
+    align-items: end; /* Align items to the start of the flex container */
+    gap: 1vw; /* Space out flex items */
+  }
+
+  /* Adjust header and other sections for a more vertical layout */
+  header {
+    /* Adjust header elements for mobile */
+  }
+
+  .experiment {
+    font-size: 3.5vw;
+  }
+
+  /* Ensure .big-number and other absolute positioned elements don't overlap or get cut off */
+  .big-number {
+    font-size: 15vw; /* Adjust font size to be responsive */
+    position: fixed; /* Default positioning */
+  }
+  .left-number {
+    left: 20vw; 
+    bottom: 30vw;
+  }
+	.right-number{
+		right: 10vw;
+	}
+  .circle-overlay {
+   position: fixed;
+   top: 35vw;
+  }
+  
+  /* Other content adjustments */
+  .main, .aside, .footer {
+    /* Adjust main content, aside, and footer for mobile layout */
+  }
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes timeAnimation {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.time {
+  /* ... other styles ... */
+  animation: timeAnimation 15s ease-in-out infinite;
+}
+.material {
+  /* ... other styles ... */
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+.motion {
+  /* ... other styles ... */
+  animation: floatAnimation 2s ease-in-out infinite;
+}
+
+@keyframes orbit-first {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes diagonal-orbit-first {
+  0% {
+    transform: rotateY(360deg) rotateX(0deg) translateZ(0);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(180deg) translateZ(150px); /* Moves outwards */
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(360deg) translateZ(0);
+  }
+}
+
+@keyframes diagonal-orbit-second {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateX(-180deg) translateZ(-150px); /* Moves inwards */
+  }
+  100% {
+    transform: rotateY(-360deg) rotateX(-360deg) translateZ(0);
+  }
+}
+
+.first-circle {
+  animation: diagonal-orbit-first 21s linear infinite;
+  /* Other styles for positioning and size */
+}
+
+.second-circle {
+  animation: diagonal-orbit-second 13s linear infinite;
+  /* Other styles for positioning and size */
+}
