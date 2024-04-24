@@ -26,16 +26,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2vw;
+  padding: 2vw; 
   
 }
 
 .title-and-list {
-	order: 1;
-  display: flex;
-  flex-direction: column;
+	flex: 1 1 auto; /* grow, shrink, basis */
+  /* Sets a max-width where 250px is an arbitrary value you can adjust */
+  max-width: calc(50% - 250px); /* Adjust the 250px to whatever suits your layout */
+  /* Your existing padding, margin, etc. */
 	padding-left: 3vw;
+	flex-direction: column;
 }
+
 
 
 nav ul {
@@ -81,23 +84,11 @@ a:hover h1, a:focus h1 {
   text-decoration: none; /* Optional: underline on hover for emphasis */
 }
 
-.experiment {
-  order: 2;
-  color: rgba(28,23,33,.88);
-  font-family: "anonymous-pro", monospace;
-  position: absolute;
-  top: 6vw; /* Move down from the top of the header */
-  left: 25vw;
-  padding: 0;
-  font-size: 2vw;
+.header-paragraph {
+  align-items: flex-end;
+  width: 50%; /* Or whatever width works with your design */
+  padding: 20px; /* Optional padding for spacing */
 }
-.experiment .highlight {
-  text-decoration: none; /* Remove any default underlining */
-  background-color: rgba(28,23,33,.88); /* Black background */
-  padding: 0 4px; /* Padding on the sides of the text */
-  box-decoration-break: clone; /* Ensures background goes across line breaks if needed */
-}
-
 main {
   /*flex-grow: 1;*/
   position: relative;
