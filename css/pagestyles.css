@@ -214,10 +214,7 @@ footer {
   header, footer {
     flex-direction: column;
   }
-  
-  .big-number, .circle-overlay {
-    
-  }
+
 }
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
@@ -235,141 +232,21 @@ footer {
   }
 
   
-  .label {
-    font-size: 4vw; /* Larger font size for labels */
-    margin-bottom: 1vw; /* Add space below each label */
-  }
-
-  /* Adjust positioning for labels to add more space */
-  .material, .time, .motion {
-    position: fixed; /* Switch to static positioning */
-    
-	}
-	.time{
-		top: 20vw;
-	}
-	.motion{
-		top: 40vw;
-	}
-	.material{
-		bottom: 20vw;
+	.header-paragraph{
+		width: 80%;
+		text-align: center;
+		font-size: 2.3vw;
+		align-items: center;
 	}
   
-  /* In case you're using flex or grid for .labels, adjust as follows */
-  .labels {
-    display: flex;
-    flex-direction: column;
-    align-items: end; /* Align items to the start of the flex container */
-    gap: 1vw; /* Space out flex items */
-  }
-
-  /* Adjust header and other sections for a more vertical layout */
-  header {
-    /* Adjust header elements for mobile */
-  }
+ 
+ 
 
   .experiment {
     font-size: 3.5vw;
   }
 
-  /* Ensure .big-number and other absolute positioned elements don't overlap or get cut off */
-  .big-number {
-    font-size: 15vw; /* Adjust font size to be responsive */
-    position: fixed; /* Default positioning */
-  }
-  .left-number {
-    left: 20vw; 
-    bottom: 30vw;
-  }
-	.right-number{
-		right: 10vw;
-	}
-  .circle-overlay {
-   position: fixed;
-   top: 35vw;
-  }
+
   
-  /* Other content adjustments */
-  .main, .aside, .footer {
-    /* Adjust main content, aside, and footer for mobile layout */
-  }
-}
 
-@keyframes floatAnimation {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(10px, 10px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes timeAnimation {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(20px, 20px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-.time {
-  /* ... other styles ... */
-  animation: timeAnimation 15s ease-in-out infinite;
-}
-.material {
-  /* ... other styles ... */
-  animation: floatAnimation 6s ease-in-out infinite;
-}
-.motion {
-  /* ... other styles ... */
-  animation: floatAnimation 2s ease-in-out infinite;
-}
-
-@keyframes orbit-first {
-  0% {
-    transform: rotate(0deg) translateX(150px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translateX(150px) rotate(-360deg);
-  }
-}
-
-@keyframes diagonal-orbit-first {
-  0% {
-    transform: rotateY(360deg) rotateX(0deg) translateZ(0);
-  }
-  50% {
-    transform: rotateY(180deg) rotateX(180deg) translateZ(150px); /* Moves outwards */
-  }
-  100% {
-    transform: rotateY(0deg) rotateX(360deg) translateZ(0);
-  }
-}
-
-@keyframes diagonal-orbit-second {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg) translateZ(0);
-  }
-  50% {
-    transform: rotateY(-180deg) rotateX(-180deg) translateZ(-150px); /* Moves inwards */
-  }
-  100% {
-    transform: rotateY(-360deg) rotateX(-360deg) translateZ(0);
-  }
-}
-
-.first-circle {
-  animation: diagonal-orbit-first 21s linear infinite;
-  /* Other styles for positioning and size */
-}
-
-.second-circle {
-  animation: diagonal-orbit-second 13s linear infinite;
-  /* Other styles for positioning and size */
 }
