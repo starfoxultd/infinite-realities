@@ -108,29 +108,35 @@ main {
 
 .video-container {
   flex-basis: 50%; /* Adjust based on your design */
-  margin-right: 20px; /* Provides space between this content and the aside */
+  margin-right: 20px;
+  margin-left: 2vw/* Provides space between this content and the aside */
 }
 
 .video-container video {
-  width: 100%; /* Makes the video responsive */
+  width: 80%; /* Makes the video responsive */
   height: auto; /* Maintains the aspect ratio */
 }
 
 .video-caption {
+  width: 80%;
   text-align: center; /* Centers the caption text if desired */
   font-style: italic; /* Common style for video captions */
   padding-top: 5px; /* Adds a little space between the video and the caption */
 }
-
+.video-container, .content-text {
+	flex: 1 1 0;
+}
 .content-text {
+  width: 80%;
   flex-basis: 50%; /* Adjust based on your design */
   /* Add padding, font-sizes, etc., as needed */
 }
 
 .interview-container {
+	flex: 0 0 15vw;
   flex-basis: 30%; /* Adjust based on your design */
-  overflow-y: auto; /* Enables vertical scrolling if the text is too long */
-  height: 500px; /* Fixed height, or change to a percentage based on your design */
+  overflow-y: scroll; /* Enables vertical scrolling if the text is too long */
+  height: 50vw; /* Fixed height, or change to a percentage based on your design */
   padding: 20px; /* Add padding to match the rest of the design */
 }
 .title-and-list,
