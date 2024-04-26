@@ -103,6 +103,7 @@ main {
 .main-content {
   display: flex;
   justify-content: space-between;
+	align-items: start;
   padding: 20px;
 }
 
@@ -132,13 +133,18 @@ main {
   /* Add padding, font-sizes, etc., as needed */
 }
 
-.interview-container {
+.interview-container-desktop {
   flex: 0 0 10vw;
   flex-basis: 30%; /* Adjust based on your design */
   overflow-y: scroll; /* Enables vertical scrolling if the text is too long */
   height: 50vw; /* Fixed height, or change to a percentage based on your design */
-  padding: 20px; /* Add padding to match the rest of the design */
+  padding: 30px; /* Add padding to match the rest of the design */
 }
+
+.interview-container-mobile {
+    display: none;  /* Hidden on mobile by default */
+}
+
 .title-and-list,
 aside,
 footer {
@@ -210,15 +216,15 @@ footer {
   width: 100%;
 }
 
+
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+  
   header, footer {
     flex-direction: column;
   }
 
-}
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-  /* Adjust the list of names to have more space between elements */
+
 	h1{
 		font-size: 7vw;
 	}
@@ -230,7 +236,16 @@ footer {
     margin-bottom: 2em; /* Increases space between list items */
     font-size: 1.2em; /* Optionally increase the font size if needed */
   }
+.interview-container-desktop {
+        display: none;  /* Hide desktop interview container on mobile */
+    }
 
+    .interview-container-mobile {
+        display: block;  /* Show mobile interview container on mobile */
+        order: 3;  /* Position it where needed */
+        width: 100%;  /* Full width for better mobile display */
+        margin-top: 20px;  /* Space above the container for clarity */
+    }
   
 	.header-paragraph{
 		width: 80%;
@@ -239,8 +254,22 @@ footer {
 		align-items: center;
 	}
   
- 
- 
+	
+	}
+ .main-content {
+        flex-direction: column;
+    }
+
+.video-container, .interview-container {
+        width: 100%;  
+        margin-right: 0; 
+    }
+
+.interview-container {
+        order: 2;  
+        margin-top: 20px;  
+    }
+
 
   .experiment {
     font-size: 3.5vw;
