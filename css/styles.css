@@ -227,21 +227,17 @@ footer {
   color: #fff;
   padding: .5vw;
   text-align: center;
-  flex-shrink: 0; /* Prevent footer from shrinking */
+  flex-shrink: 0;
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  header, footer {
+
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 852px) {
+	header, footer {
     flex-direction: column;
   }
-  
-  .big-number, .circle-overlay {
-    
-  }
-}
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
   /* Adjust the list of names to have more space between elements */
 	h1{
 		font-size: 7vw;
@@ -300,11 +296,11 @@ footer {
   }
   .left-number {
     left: ; 
-    top: 40vw;
+    top: 20vw;
   }
 	.right-number{
 		right: ;
-		top: 80vw;
+		top: 40vw;
 	}
   .circle-overlay {
    position: fixed;
@@ -315,6 +311,17 @@ footer {
   .main, .aside, .footer {
     /* Adjust main content, aside, and footer for mobile layout */
   }
+}
+ 
+@media (max-width: 400px){
+	.left-number {
+    left: ; 
+    top: 50vw;
+  }
+	.right-number{
+		right: ;
+		top: 90vw;
+	}
 }
 
 @keyframes floatAnimation {
