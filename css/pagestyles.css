@@ -105,6 +105,8 @@ main {
   justify-content: space-between;
 	align-items: start;
   padding: 20px;
+
+	
 }
 
 .video-container {
@@ -129,21 +131,19 @@ main {
 }
 .content-text {
   width: 100%;
-  flex-basis: 50%; /* Adjust based on your design */
-  /* Add padding, font-sizes, etc., as needed */
+  flex-basis: 50%;
+  text-indent: 2vw
 }
 
-.interview-container-desktop {
+.interview-container {
   flex: 0 0 10vw;
+  text-indent: 2vw;
   flex-basis: 30%; /* Adjust based on your design */
   overflow-y: scroll; /* Enables vertical scrolling if the text is too long */
   height: 50vw; /* Fixed height, or change to a percentage based on your design */
-  padding: 30px; /* Add padding to match the rest of the design */
+  padding: 20px; /* Add padding to match the rest of the design */
 }
 
-.interview-container-mobile {
-    display: none;  /* Hidden on mobile by default */
-}
 
 .title-and-list,
 aside,
@@ -236,16 +236,7 @@ footer {
     margin-bottom: 2em; /* Increases space between list items */
     font-size: 1.2em; /* Optionally increase the font size if needed */
   }
-.interview-container-desktop {
-        display: none;  /* Hide desktop interview container on mobile */
-    }
 
-    .interview-container-mobile {
-        display: block;  /* Show mobile interview container on mobile */
-        order: 3;  /* Position it where needed */
-        width: 100%;  /* Full width for better mobile display */
-        margin-top: 20px;  /* Space above the container for clarity */
-    }
   
 	.header-paragraph{
 		width: 80%;
