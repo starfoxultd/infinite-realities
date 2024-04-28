@@ -315,16 +315,16 @@ footer {
  
 @media (max-width: 400px){
 	.left-number {
-    left: ; 
-    top: 20vw;
+    
+    top: 60vw;
   }
 	.right-number{
 		right: ;
-		top: 40vw;
+		top: 80vw;
 	}
 	.circle-overlay {
    position: fixed;
-   top: 12vw;
+   top: 50vw;
   }
 }
 
