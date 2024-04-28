@@ -316,12 +316,16 @@ footer {
 @media (max-width: 400px){
 	.left-number {
     left: ; 
-    top: 50vw;
+    top: 20vw;
   }
 	.right-number{
 		right: ;
-		top: 90vw;
+		top: 40vw;
 	}
+	.circle-overlay {
+   position: fixed;
+   top: 12vw;
+  }
 }
 
 @keyframes floatAnimation {
