@@ -144,7 +144,7 @@ font-family: "anonymous-pro", monospace;
   overflow-y: scroll; /* Enables vertical scrolling if the text is too long */
   height: 50vw; /* Fixed height, or change to a percentage based on your design */
   padding: 20px; /* Add padding to match the rest of the design */
-	text-indent: 2vw;
+  text-indent: 2vw;
 }
 .title-and-list,
 aside,
@@ -155,14 +155,16 @@ footer {
 
 .slideshow-container {
   position: relative;
-  max-width: 650px; /* Maximum width of the slideshow container */
+  max-width: 65vw; /* Maximum width of the slideshow container */
   margin: auto; /* Center the slideshow */
   overflow: hidden; /* Hide the images that are out of the container */
 }
 
 .slide {
   display: none; /* Hide the images initially */
-	height: 50vw;
+  height: 45vw;
+  object-fit: cover;
+  object-position: center;
 }
 
 .fade {
