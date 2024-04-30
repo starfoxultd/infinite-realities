@@ -103,8 +103,8 @@ main {
 .main-content {
   display: flex;
   justify-content: space-between;
-	align-items: start;
-  padding: 200px;
+  align-items: start;
+  padding: 20px;
 	
 }
 
@@ -135,7 +135,8 @@ main {
   font-family: "anonymous-pro", monospace;
   width: 100%;
   flex-basis: 50%; 
-	text-indent: 2vw
+	text-indent: 2vw;
+	padding: 1vw;
 }
 
 .interview-container {
@@ -160,6 +161,7 @@ footer {
   margin: auto; /* Center the slideshow */
   overflow: hidden; /* Hide the images that are out of the container */
   object-position: center;
+  padding: 1vw;
 }
 
 .slide {
