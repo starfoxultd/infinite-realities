@@ -104,7 +104,8 @@ main {
   display: flex;
   justify-content: space-between;
 	align-items: start;
-  padding: 20px;
+  padding: 200px;
+	
 }
 
 .video-container {
@@ -158,11 +159,12 @@ footer {
   max-width: 65vw; /* Maximum width of the slideshow container */
   margin: auto; /* Center the slideshow */
   overflow: hidden; /* Hide the images that are out of the container */
+  object-position: center;
 }
 
 .slide {
   display: none; /* Hide the images initially */
-  height: 45vw;
+  height: 30vw;
   object-fit: cover;
   object-position: center;
 }
