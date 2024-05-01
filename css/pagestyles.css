@@ -137,6 +137,7 @@ main {
   flex-basis: 50%; 
 	text-indent: 2vw;
 	padding: 1vw;
+	margin-right: 5vw;
 }
 
 .interview-container {
