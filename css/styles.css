@@ -2,20 +2,20 @@
 /* CSS Document */
 
 body, html {
-  height: 100vh; /* Use viewport height to restrict the page height */
+  height: 100vh; 
   max-height: 100vh;
-  /*overflow: hidden; /* Prevent scrolling */
+  /*overflow: hidden;*/
   margin: 0;
   font-family: 'Arial', sans-serif;
   background: #f4f4f4;
 }
 
 .container {
-  position: relative; /* Contain absolutely positioned children */
+  position: relative; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden; /* Hide overflow */
+  overflow: hidden; 
   justify-content: space-between;
 }
 
@@ -44,7 +44,7 @@ nav ul {
   list-style: none;
   padding: 10;
   margin: 0;
-  margin-top: 2vw; /* Adjust spacing as needed */
+  margin-top: 2vw; 
 }
 
 nav ul li {
@@ -53,14 +53,14 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333; /* Adjust color to match the design */
-  font-weight: bold; /* If you want the links to be bold */
+  color: #333; 
+  font-weight: bold; 
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #00ada7; /* Adjust hover color to match the design */
+  color: #00ada7; 
 }
 
 h1 {
@@ -76,16 +76,16 @@ h1 {
   color: rgba(28,23,33,.88);
   font-family: "anonymous-pro", monospace;
   position: absolute;
-  top: 6vw; /* Move down from the top of the header */
+  top: 6vw; 
   left: 25vw;
   padding: 0;
   font-size: 2vw;
 }
 .experiment .highlight {
-  text-decoration: none; /* Remove any default underlining */
-  background-color: rgba(28,23,33,.88); /* Black background */
-  padding: 0 4px; /* Padding on the sides of the text */
-  box-decoration-break: clone; /* Ensures background goes across line breaks if needed */
+  text-decoration: none; 
+  background-color: rgba(28,23,33,.88);
+  padding: 0 4px;
+  box-decoration-break: clone; 
 }
 
 main {
@@ -94,15 +94,15 @@ main {
   display: flex;
   align-items: center;
   z-index: 1;
-  margin: 0 auto; /* Center the main content */
-  padding: 2vw 0; /* Give some space on the top and bottom */
+  margin: 0 auto; 
+  padding: 2vw 0; 
 }
 
 .title-and-list,
 aside,
 footer {
   position: relative;
-  z-index: 2; /* Higher than the main content's z-index to ensure visibility */
+  z-index: 2; 
 }
 
 
@@ -110,7 +110,7 @@ footer {
   position: absolute;
   bottom: 1vw;
   transform: translateY(-50%);
-  z-index: -1; /* Behind the content but above the background */
+  z-index: -1; 
 }
 .big-number {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -151,38 +151,38 @@ footer {
 }
 .first-circle {
 	bottom: 2vw;
-    right: 5vw; /* Adjust according to design needs */
+    right: 5vw; 
     background: radial-gradient(circle, rgba(0,173,167,0.5) 0%, rgba(0,173,167,0.5) 50%, rgba(0,0,0,0) 50%);
 }
 
 .second-circle {
     left: 10vw; 
-	bottom: 10vw;/* Adjust according to design needs */
+	bottom: 10vw;
     background: radial-gradient(circle, rgba(248,155,155,0.5) 0%, rgba(248,155,155,0.5) 60%, rgba(0,0,0,0) 50%);
 }
 
 /* Styles for the black box */
 .black-box {
     position: absolute;
-    bottom:25vw; /* Adjust as needed */
-    left: 10vw; /* Center horizontally */
+    bottom:25vw; 
+    left: 10vw; 
     transform: translateX(-50%);
     background-color: rgba(28,23,33,.88);
     color: #14131C;
     padding: 2vw 6vw;
     width: auto;
     height: auto;
-    z-index: 2; /* Ensure it is above other background elements */
-    text-align: center; /* Center the text inside the box */
+    z-index: 2; 
+    text-align: center; 
 }
 
 
 aside {
   font-family: "anonymous-pro", monospace;
   display: flex;
-  flex-direction: column; /* Stack the labels and list vertically */
+  flex-direction: column; 
   padding: 0px;
-  justify-content: center; /* Center the content vertically */
+  justify-content: center; 
 }
 
 .labels {
@@ -195,22 +195,22 @@ aside {
   position: absolute;
   font-size: 2vw;
   color: #777;
-  /* Remove the previous .label styles here */
+  
 }
 
 .material {
-  bottom: 15vw; /* Adjust the value as needed */
-  left: 30vw; /* Adjust the value as needed */
+  bottom: 15vw; 
+  left: 30vw; 
 }
 
 .time {
-  bottom: 30vw; /* Adjust the value as needed */
-  left: 40vw; /* Adjust the value as needed */
+  bottom: 30vw; 
+  left: 40vw;
 }
 
 .motion {
-  bottom: 17vw; /* Adjust the value as needed */
-  right: 11vw; /* Adjust the value as needed */
+  bottom: 17vw; 
+  right: 11vw; 
 }
 aside ul {
   list-style-type: none;
@@ -223,11 +223,12 @@ aside ul li {
 }
 
 footer {
+  font-family: "anonymous-pro", monospace;
   background: #333;
   color: #fff;
   padding: .5vw;
   text-align: center;
-  flex-shrink: 0;
+  flex-shrink: 0; 
   width: 100%;
 }
 
@@ -238,7 +239,7 @@ footer {
 	header, footer {
     flex-direction: column;
   }
-  /* Adjust the list of names to have more space between elements */
+  
 	h1{
 		font-size: 7vw;
 	}
@@ -247,19 +248,19 @@ footer {
 	}
 	
   nav ul li {
-    margin-bottom: 2em; /* Increases space between list items */
-    font-size: 1.2em; /* Optionally increase the font size if needed */
+    margin-bottom: 2em; 
+    font-size: 1.2em; 
   }
 
   
   .label {
-    font-size: 4vw; /* Larger font size for labels */
-    margin-bottom: 1vw; /* Add space below each label */
+    font-size: 4vw; 
+    margin-bottom: 1vw; 
   }
 
-  /* Adjust positioning for labels to add more space */
+  
   .material, .time, .motion {
-    position: fixed; /* Switch to static positioning */
+    position: fixed; 
     
 	}
 	.time{
@@ -272,27 +273,27 @@ footer {
 		top: 65vw;
 	}
   
-  /* In case you're using flex or grid for .labels, adjust as follows */
+  
   .labels {
     display: flex;
     flex-direction: column;
-    align-items: end; /* Align items to the start of the flex container */
-    gap: 1vw; /* Space out flex items */
+    align-items: end; 
+    gap: 1vw; 
   }
 
-  /* Adjust header and other sections for a more vertical layout */
+  
   header {
-    /* Adjust header elements for mobile */
+    
   }
 
   .experiment {
     font-size: 3.5vw;
   }
 
-  /* Ensure .big-number and other absolute positioned elements don't overlap or get cut off */
+  
   .big-number {
-    font-size: 15vw; /* Adjust font size to be responsive */
-    position: fixed; /* Default positioning */
+    font-size: 15vw; 
+    position: fixed; 
   }
   .left-number {
     left: ; 
@@ -307,9 +308,9 @@ footer {
    top: 35vw;
   }
   
-  /* Other content adjustments */
+  
   .main, .aside, .footer {
-    /* Adjust main content, aside, and footer for mobile layout */
+    
   }
 }
  
@@ -352,15 +353,15 @@ footer {
 }
 
 .time {
-  /* ... other styles ... */
+  
   animation: timeAnimation 15s ease-in-out infinite;
 }
 .material {
-  /* ... other styles ... */
+  
   animation: floatAnimation 6s ease-in-out infinite;
 }
 .motion {
-  /* ... other styles ... */
+  
   animation: floatAnimation 2s ease-in-out infinite;
 }
 
@@ -399,10 +400,10 @@ footer {
 
 .first-circle {
   animation: diagonal-orbit-first 21s linear infinite;
-  /* Other styles for positioning and size */
+
 }
 
 .second-circle {
   animation: diagonal-orbit-second 13s linear infinite;
-  /* Other styles for positioning and size */
+  
 }

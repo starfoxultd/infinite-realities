@@ -2,20 +2,20 @@
 /* CSS Document */
 
 body, html {
-  height: 100vh; /* Use viewport height to restrict the page height */
+  height: 100vh; 
   max-height: 100vh;
-  /*overflow: hidden; /* Prevent scrolling */
+  /*overflow: hidden;*/
   margin: 0;
   font-family: 'Arial', sans-serif;
   background: #f4f4f4;
 }
 
 .container {
-  position: relative; /* Contain absolutely positioned children */
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden; /* Hide overflow */
+  overflow: hidden; 
   justify-content: space-between;
 }
 
@@ -31,8 +31,7 @@ header {
 }
 
 .title-and-list {
-	flex: 1 1 auto; /* grow, shrink, basis */
-  /* Sets a max-width where 250px is an arbitrary value you can adjust */
+	flex: 1 1 auto;
 	padding-left: 3vw;
 	flex-direction: column;
 }
@@ -46,7 +45,7 @@ nav ul {
   list-style: none;
   padding: 10;
   margin: 0;
-  margin-top: 2vw; /* Adjust spacing as needed */
+  margin-top: 2vw; 
 }
 
 nav ul li {
@@ -55,14 +54,14 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333; /* Adjust color to match the design */
-  font-weight: bold; /* If you want the links to be bold */
+  color: #333; 
+  font-weight: bold; 
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #00ada7; /* Adjust hover color to match the design */
+  color: #00ada7; 
 }
 
 h1 {
@@ -73,20 +72,20 @@ h1 {
   color: #333;
 }
 a h1 {
-  color: #333; /* Example color, use whatever is defined for your h1 */
+  color: #333; 
   text-decoration: none; 
 }
 
 a:hover h1, a:focus h1 {
-  color: #00ada7; /* Adjust hover color to match the design */
-  text-decoration: none; /* Optional: underline on hover for emphasis */
+  color: #00ada7; 
+  text-decoration: none; 
 }
 
 .header-paragraph {
   font-family:  "anonymous-pro", monospace;
   align-items: flex-end;
-  width: 64%; /* Or whatever width works with your design */
-  padding: 6vw 0 0 0; /* Optional padding for spacing */
+  width: 64%; 
+  padding: 6vw 0 0 0; 
   font-size: 1.6vw;
   text-indent: 2vw
 }
@@ -96,8 +95,8 @@ main {
   display: flex;
   align-items: center;
   z-index: 1;
-  margin: 0 auto; /* Center the main content */
-  padding: 2vw 0; /* Give some space on the top and bottom */
+  margin: 0 auto; 
+  padding: 2vw 0; 
 }
 
 .main-content {
@@ -109,23 +108,23 @@ main {
 }
 
 .video-container {
-  flex-basis: 50%; /* Adjust based on your design */
+  flex-basis: 50%; 
   margin-right: 20px;
-  margin-left: 2vw/* Provides space between this content and the aside */
+  margin-left: 2vw;
 }
 
 .video-container video {
-  width: 100%; /* Makes the video responsive */
-  height: auto; /* Maintains the aspect ratio */
+  width: 100%; 
+  height: auto; 
 }
 
 .video-caption {
   font-family: "ocr-a-std", monospace;
   font-size: 1.2vw;
   width: 100%;
-  text-align: center; /* Centers the caption text if desired */
-  font-style: italic; /* Common style for video captions */
-  padding-top: 1vw; /* Adds a little space between the video and the caption */
+  text-align: center;
+  font-style: italic;
+  padding-top: 1vw; 
   padding-bottom: 1vw;
 }
 .video-container, .content-text, .slideshow-container {
@@ -143,30 +142,30 @@ main {
 .interview-container {
 font-family: "anonymous-pro", monospace;
   flex: 0 0 10vw;
-  flex-basis: 30%; /* Adjust based on your design */
-  overflow-y: scroll; /* Enables vertical scrolling if the text is too long */
-  height: 50vw; /* Fixed height, or change to a percentage based on your design */
-  padding: 20px; /* Add padding to match the rest of the design */
+  flex-basis: 30%; 
+  overflow-y: scroll; 
+  height: 50vw; 
+  padding: 20px; 
   text-indent: 2vw;
 }
 .title-and-list,
 aside,
 footer {
   position: relative;
-  z-index: 2; /* Higher than the main content's z-index to ensure visibility */
+  z-index: 2; 
 }
 
 .slideshow-container {
   position: relative;
-  max-width: 65vw; /* Maximum width of the slideshow container */
-  margin: auto; /* Center the slideshow */
-  overflow: hidden; /* Hide the images that are out of the container */
+  max-width: 65vw; 
+  margin: auto; 
+  overflow: hidden; 
   object-position: center;
   padding: 1vw;
 }
 
 .slide {
-  display: none; /* Hide the images initially */
+  display: none; 
   height: 30vw;
   object-fit: cover;
   object-position: center;
@@ -182,7 +181,7 @@ footer {
   to {opacity: 1}
 }
 
-/* Display the first image by default */
+
 .slide:first-child {
   display: block;
 }
@@ -191,7 +190,7 @@ footer {
   position: absolute;
   bottom: 1vw;
   transform: translateY(-50%);
-  z-index: -1; /* Behind the content but above the background */
+  z-index: -1; 
 }
 
 .circle-overlay {
@@ -205,13 +204,13 @@ footer {
 }
 .first-circle {
 	bottom: 2vw;
-    right: 5vw; /* Adjust according to design needs */
+    right: 5vw; 
     background: radial-gradient(circle, rgba(0,173,167,0.5) 0%, rgba(0,173,167,0.5) 50%, rgba(0,0,0,0) 50%);
 }
 
 .second-circle {
     left: 10vw; 
-	bottom: 10vw;/* Adjust according to design needs */
+	bottom: 10vw;
     background: radial-gradient(circle, rgba(248,155,155,0.5) 0%, rgba(248,155,155,0.5) 60%, rgba(0,0,0,0) 50%);
 }
 
@@ -222,7 +221,7 @@ footer {
   color: #fff;
   padding: .5vw;
   text-align: center;
-  flex-shrink: 0; /* Prevent footer from shrinking */
+  flex-shrink: 0; 
   width: 100%;
 }
 
@@ -244,8 +243,8 @@ footer {
 	}
 	
   nav ul li {
-    margin-bottom: 2em; /* Increases space between list items */
-    font-size: 1.2em; /* Optionally increase the font size if needed */
+    margin-bottom: 2em; 
+    font-size: 1.2em; 
   }
 
   
